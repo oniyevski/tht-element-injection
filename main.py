@@ -103,19 +103,9 @@ class RequestLogger:
                 ),
                 "https://www.turkhackteam.org/styles/v1/tht/logo.png"
             )
-            # Aşağıdaki örneklerle oynarken seçtiğiniz haricindekileri yorum satırına almayı unutmayın.
-            # NOTE ÖRNEK 1 (Direkt olarak reklamı değiştirme): Alttaki 3 satırla birlikte orjinal veri üzerinden modifiyeli veriyi cevapta manipüle ediyoruz.
             soup = str(soup)
-            soup = soup.replace(orginal, orginal + get_ad_2)
+            soup = soup.replace(orginal, get_ad_2)
             flow.response.set_text(soup)
-            # NOTE ÖRNEK 2 (Direkt olarak reklamı değiştirme): Alttaki 3 satırla birlikte orjinal veri üzerindeki reklamı modifiyeli veriyle cevapta manipüle ediyoruz.
-            #soup = str(soup)
-            #soup = soup.replace(orginal, get_ad_2)
-            #flow.response.set_text(soup)
-            # NOTE ÖRNEK 3 (Aynı reklamı çoğaltma): Alttaki 3 satırla birlikte orjinal veri üzerinden reklamı 2 adet modifiyeli veriyle  cevapta manipüle ediyoruz.
-            #soup = str(soup)
-            #soup = soup.replace(orginal, get_ad_2 + get_ad_2)
-            #flow.response.set_text(soup)
             
 # !SECTION
 
